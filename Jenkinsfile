@@ -1,7 +1,7 @@
 node{
     
     stage('Clone repo'){
-        git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git'
+        git credentialsId: 'GIT-Credentials', url: 'https://github.com/rajuthyagu/maven-web-app.git'
     }
     
     stage('Maven Build'){
@@ -26,10 +26,10 @@ node{
 			]	
 		],
 		credentialsId: 'nexus3',
-		groupId: 'in.ashokit',
+		groupId: 'thyagu in',
 		nexusUrl: '',
 		protocol: 'http',
-		repository: 'ashokit-release'
+		repository: 'thyagu-release'
 		version: '1.0.0'
 	}
 }
